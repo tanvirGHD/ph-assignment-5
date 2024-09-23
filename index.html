@@ -20,37 +20,43 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-Lexend">
+
     <!-- header section start -->
-    <header class="bg-[#F9F7F3]">
+    <header class="sticky top-0 z-10">
       <!-- navigation start -->
-      <div class="w-10/12 mx-auto flex justify-between pt-7 pb-11 mb-14">
-        <!-- Blog button -->
-        <button class="btn btn-active bg-[#B4F461] px-7 font-bold">Blog</button>
+      <nav class="bg-[#fffaf0]">
+        <div class="w-11/12 lg:w-10/12 mx-auto flex justify-between pt-7 pb-11 mb-14">
+          <!-- Blog button -->
+          <button class="btn btn-active bg-[#B4F461] px-7 font-bold">
+            Blog
+          </button>
 
-        <!-- Donate banglasdesh -->
-        <div class="flex items-center text-center gap-3">
-          <img src="assets/logo.png" alt="" />
-          <p class="text-xl font-bold">Donate Bnagladesh</p>
+          <!-- Donate banglasdesh -->
+          <div class="flex items-center text-center gap-3">
+            <img src="assets/logo.png" alt="" />
+            <p class="text-xl font-bold">Donate Bnagladesh</p>
+          </div>
+
+          <!-- BDT corner -->
+          <div class="flex items-center text-center gap-3">
+            <img src="assets/coin.png" alt="" />
+            <p id="total-balance" class="font-semibold">5000 BDT</p>
+          </div>
         </div>
+      </nav>
 
-        <!-- BDT corner -->
-        <div class="flex items-center text-center gap-3">
-          <img src="assets/coin.png" alt="" />
-          <p class="font-semibold">5000 BDT</p>
-        </div>
-      </div>
-    </header>
-    <!-- header section start -->
-
-    <!-- Main Section Start -->
-    <main class="w-10/12 mx-auto">
+      <!-- navigation section End -->
 
       <!-- Button (Donation & History) -->
       <div class="flex justify-center gap-6 mb-10">
         <button class="btn bg-[#B4F461] px-7">Donation</button>
         <button class="btn px-7">History</button>
       </div>
+    </header>
+    <!-- header section End -->
 
+    <!-- Main Section Start -->
+    <main class="w-10/12 mx-auto">
       <!-- card -->
 
       <!-- card-1 -->
@@ -66,8 +72,7 @@
             <div><img src="assets/coin.png" alt="" /></div>
 
             <!-- card-1 0 BDT -->
-            <div><p>0 BDT</p></div>
-
+            <div><span id="noakhali-donate-amount">0</span> BDT </div>
           </div>
           <p class="font-bold text-xl">
             Donate for Flood at Noakhali, Bangladesh
@@ -83,17 +88,22 @@
           <div class="grid grid-cols-1">
             <!-- card-1 donation input -->
             <input
+              id="noakhali-donate-input"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered w-full mt-8"
             />
             <!-- card-1 donation button -->
-            <button class="btn btn-wide bg-white w-full mt-8 font-bold input-bordered">Donate Now</button>
+            <button
+              id="noakhali-donate-button"
+              class="btn btn-wide bg-white w-full mt-8 font-bold input-bordered"
+            >
+              Donate Now
+            </button>
           </div>
         </div>
       </section>
       <!-- card-1 End -->
-
 
       <!-- card-2 Start -->
       <!-- card-2 -->
@@ -109,7 +119,6 @@
 
             <!-- card-2 0 BDT -->
             <div><p>0 BDT</p></div>
-
           </div>
           <p class="font-bold text-xl">
             Donate for Flood at Noakhali, Bangladesh
@@ -130,13 +139,15 @@
               class="input input-bordered w-full mt-8"
             />
             <!-- card-2 donation button -->
-            <button class="btn btn-wide bg-white w-full mt-8 font-bold input-bordered">Donate Now</button>
+            <button
+              class="btn btn-wide bg-white w-full mt-8 font-bold input-bordered"
+            >
+              Donate Now
+            </button>
           </div>
         </div>
       </section>
       <!--card-2 End  -->
-            
-
 
       <!-- card-3 -->
       <!-- card-3 Start -->
@@ -152,7 +163,6 @@
 
             <!-- card-3 0 BDT -->
             <div><p>0 BDT</p></div>
-
           </div>
           <p class="font-bold text-xl">
             Donate for Flood at Noakhali, Bangladesh
@@ -173,45 +183,53 @@
               class="input input-bordered w-full mt-8"
             />
             <!-- card-3 donation button -->
-            <button class="btn btn-wide bg-white w-full mt-8 font-bold input-bordered">Donate Now</button>
+            <button
+              class="btn btn-wide bg-white w-full mt-8 font-bold input-bordered"
+            >
+              Donate Now
+            </button>
           </div>
         </div>
       </section>
       <!-- card-3 End -->
-
     </main>
     <!-- Main Section End -->
-
 
     <!-- All hidden section  -->
     <section>
       <!-- Donate success Card start -->
-     <div class="w-7/12 lg:w-3/12 mx-auto bg-white border-2 p-5 rounded-lg text-center space-y-5 mb-10">
-      <p class="text-4xl font-bold">Congrates!</p>
-      <img class="mx-auto my-4" src="assets/coin.png" alt="coin">
-      <p>You Have Donated for Humankind</p>
-      <p class="text-lg font-bold">Successfully</p>
+      <div
+        id="donate-success"
+        class="w-7/12 lg:w-3/12 mx-auto hidden bg-white border-2 p-5 rounded-lg text-center space-y-5 mb-10"
+      >
+        <p class="text-4xl font-bold">Congrates!</p>
+        <img class="mx-auto my-4" src="assets/coin.png" alt="coin" />
+        <p>You Have Donated for Humankind</p>
+        <p class="text-lg font-bold">Successfully</p>
 
-      <!-- Close button -->
-      <button class="mt-4 bg-slate-200 px-4 py-2 rounded-lg font-bold">Close confirmation</button>
-     </div>
-     <!-- Donate success Card start -->
+        <!-- Close button -->
+        <button class="mt-4 bg-slate-200 px-4 py-2 rounded-lg font-bold">
+          Close confirmation
+        </button>
+      </div>
+      <!-- Donate success Card End -->
     </section>
-
-
-
 
     <!-- FAQ Section start -->
     <section class="w-10/12 mx-auto my-10">
       <div class="flex items-center gap-4 mb-8">
-        <div><p class="font-bold text-5xl">Important FAQ </p></div>
-        <div><img class="h-12 w-14" src="assets/question.png" alt=""></div>
+        <div><p class="font-bold text-5xl">Important FAQ</p></div>
+        <div><img class="h-12 w-14" src="assets/question.png" alt="" /></div>
       </div>
 
-     <!-- collapse start -->
+      <!-- collapse start -->
       <div class="border-2 rounded-lg">
-        <div tabindex="0" class="collapse collapse-arrow  border-base-300 border py-7">
-          <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 border py-7"
+        >
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model(DOM)?
           </div>
           <div class="collapse-content">
             <p>tabindex="0" attribute is necessary to make the div focusable</p>
@@ -219,8 +237,12 @@
         </div>
 
         <!-- collapse 2 -->
-        <div tabindex="0" class="collapse collapse-arrow  border-base-300 border py-7">
-          <div class="collapse-title text-xl font-medium">How do you select an element form the DOM?
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 border py-7"
+        >
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element form the DOM?
           </div>
           <div class="collapse-content">
             <p>tabindex="0" attribute is necessary to make the div focusable</p>
@@ -228,8 +250,13 @@
         </div>
 
         <!-- collapse 3 -->
-        <div tabindex="0" class="collapse collapse-arrow  border-base-300 border py-7">
-          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 border py-7"
+        >
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
           </div>
           <div class="collapse-content">
             <p>tabindex="0" attribute is necessary to make the div focusable</p>
@@ -237,21 +264,30 @@
         </div>
 
         <!-- collapse 4 -->
-        <div tabindex="0" class="collapse collapse-arrow  border-base-300 border py-7">
-          <div class="collapse-title text-xl font-medium">How do you manipulate and element's attributes and style using the DOM?
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 border py-7"
+        >
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate and element's attributes and style using the
+            DOM?
           </div>
           <div class="collapse-content">
             <p>tabindex="0" attribute is necessary to make the div focusable</p>
           </div>
         </div>
       </div>
-     <!-- collapse start -->
-
+      <!-- collapse start -->
     </section>
     <!-- FAQ Section End -->
 
-
-    <!-- History Section -->
+    <!-- History Section start-->
+    <section class="w-10/12 mx-auto mb-7">
+      <div class="border-2 rounded-lg p-4">
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </section>
+    <!-- History Section End-->
 
     <script src="index.js"></script>
   </body>
