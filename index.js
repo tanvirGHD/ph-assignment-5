@@ -2,27 +2,80 @@ function getInputValueById(id){
     return parseFloat(document.getElementById(id).value);
 }
 
-
 function getPreviousMyBalance(id){
     return parseFloat(document.getElementById(id).innerText) || 0;
 }
+
+// document.addEventListener('DOMContentLoaded', function() {
+    
+// });
+
+// Home button 
+const homeButton = document.getElementById('home-button');
+if (homeButton) {
+    homeButton.addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+}
+
+// Blog button 
+const blogButton = document.getElementById('blog-button');
+if (blogButton) {
+    blogButton.addEventListener('click', function() {
+        window.location.href = 'blog.html'; // Redirect to Blog
+    });
+}
+
+
+//Donation and history Button
+const donationButton =document.getElementById('donation-btn');
+const historyButton = document.getElementById('history-btn');
+//donation
+donationButton.addEventListener('click',function(){
+    donationButton.classList.add(
+        'bg-[#B4F461]'
+    )
+    historyButton.classList.remove(
+        'text-black'
+    )
+    historyButton.classList.remove('bg-[#B4F461]');
+    document.getElementById('history-section').classList.add('hidden');
+    document.getElementById('main-hidden').classList.remove('hidden');
+})
+
+//history
+historyButton.addEventListener('click',function(){
+    historyButton.classList.add(
+        'bg-[#B4F461]'
+    )
+
+    donationButton.classList.remove(
+        'bg-[#B4F461]'
+    )
+
+    document.getElementById('history-section').classList.remove('hidden');
+    document.getElementById('main-hidden').classList.add('hidden');
+
+})
+
 
 
 //Noakhali donate 
     const noakhaliDonateButton =document.getElementById('noakhali-donate-button');
     noakhaliDonateButton.addEventListener('click',function(){
     const noakhaliInputValue = getInputValueById('noakhali-donate-input');   
-  
+
+
+
     //alert
     if(isNaN(noakhaliInputValue) || noakhaliInputValue < 0 || noakhaliInputValue === ''){
         alert('Invalid Donation Amount')
     }
     else{
 
-        document.getElementById('my_modal_4').classList.remove('hidden');
-        // document.getElementById('success-message').style.display = 'block';
 
     }
+
 
 
     //noakhali-donate-amount
@@ -117,9 +170,11 @@ quotaDonationButton.addEventListener('click',function(){
 
 
 
-// Blog
-    document.getElementById('blog-button').addEventListener('click', function() {
-    window.location.href = 'blog.html';
-});
 
-// Blog
+
+
+
+
+
+
+
