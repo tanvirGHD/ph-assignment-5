@@ -44,6 +44,7 @@
 
     <!-- Main Section Start -->
     <main class="w-10/12 mx-auto">
+
       <!-- Button (Donation & History) -->
       <div class="flex justify-center gap-6 mb-10">
         <button class="btn bg-[#B4F461] px-7">Donation</button>
@@ -61,7 +62,7 @@
         </div>
         <!-- card-1 content -->
         <div class="bg-gray-50 rounded-lg col-span-3 p-3 space-y-10">
-          <div class="flex items-center gap-4">
+          <div class="items-center gap-4 bg-gray-200 inline-flex p-2 rounded">
             <div><img src="assets/coin.png" alt="" /></div>
 
             <!-- card-1 0 BDT -->
@@ -103,7 +104,7 @@
         </div>
         <!-- card-2 content -->
         <div class="bg-gray-50 rounded-lg col-span-3 p-3 space-y-10">
-          <div class="flex items-center gap-4">
+          <div class="items-center gap-4 bg-gray-200 inline-flex p-2 rounded">
             <div><img src="assets/coin.png" alt="" /></div>
 
             <!-- card-2 0 BDT -->
@@ -146,7 +147,7 @@
         </div>
         <!-- card-3 content -->
         <div class="bg-gray-50 rounded-lg col-span-3 p-3 space-y-10">
-          <div class="flex items-center gap-4">
+          <div class="items-center gap-4 bg-gray-200 inline-flex p-2 rounded">
             <div><img src="assets/coin.png" alt="" /></div>
 
             <!-- card-3 0 BDT -->
@@ -182,15 +183,75 @@
     <!-- Main Section End -->
 
 
-    <!-- Donate success Card start -->
-    <div class="w-3/12 mx-auto bg-slate-50 border-2 p-5 rounded-lg text-center space-y-5 mb-10">
-        <p class="text-4xl font-bold">Congrates!</p>
-        <img class="mx-auto my-4" src="assets/coin.png" alt="coin">
-        <p>You Have Donated for Humankind</p>
-        <p class="text-lg font-bold">Successfully</p>
-        <button class="mt-4 bg-slate-200 px-4 py-2 rounded-lg font-bold">Close confirmation</button>
-    </div>
-    <!-- Donate success Card start -->
+    <!-- All hidden section  -->
+    <section>
+      <!-- Donate success Card start -->
+     <div class="w-7/12 lg:w-3/12 mx-auto bg-white border-2 p-5 rounded-lg text-center space-y-5 mb-10">
+      <p class="text-4xl font-bold">Congrates!</p>
+      <img class="mx-auto my-4" src="assets/coin.png" alt="coin">
+      <p>You Have Donated for Humankind</p>
+      <p class="text-lg font-bold">Successfully</p>
+
+      <!-- Close button -->
+      <button class="mt-4 bg-slate-200 px-4 py-2 rounded-lg font-bold">Close confirmation</button>
+     </div>
+     <!-- Donate success Card start -->
+    </section>
+
+
+
+
+    <!-- FAQ Section start -->
+    <section class="w-10/12 mx-auto my-10">
+      <div class="flex items-center gap-4 mb-8">
+        <div><p class="font-bold text-5xl">Important FAQ </p></div>
+        <div><img class="h-12 w-14" src="assets/question.png" alt=""></div>
+      </div>
+
+     <!-- collapse start -->
+      <div class="border-2 rounded-lg">
+        <div tabindex="0" class="collapse collapse-arrow  border-base-300 border py-7">
+          <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+
+        <!-- collapse 2 -->
+        <div tabindex="0" class="collapse collapse-arrow  border-base-300 border py-7">
+          <div class="collapse-title text-xl font-medium">How do you select an element form the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+
+        <!-- collapse 3 -->
+        <div tabindex="0" class="collapse collapse-arrow  border-base-300 border py-7">
+          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+
+        <!-- collapse 4 -->
+        <div tabindex="0" class="collapse collapse-arrow  border-base-300 border py-7">
+          <div class="collapse-title text-xl font-medium">How do you manipulate and element's attributes and style using the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+      </div>
+     <!-- collapse start -->
+
+    </section>
+    <!-- FAQ Section End -->
+
+
+    <!-- History Section -->
 
     <script src="index.js"></script>
   </body>
