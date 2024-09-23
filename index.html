@@ -20,14 +20,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="font-Lexend">
-
     <!-- header section start -->
     <header class="sticky top-0 z-10">
       <!-- navigation start -->
       <nav class="bg-[#fffaf0]">
-        <div class="w-11/12 lg:w-10/12 mx-auto flex justify-between pt-7 pb-11 mb-14">
+        <div
+          class="w-11/12 lg:w-10/12 mx-auto flex justify-between pt-7 pb-11 mb-14"
+        >
           <!-- Blog button -->
-          <button class="btn btn-active bg-[#B4F461] px-7 font-bold">
+          <button id="blog-button" class="btn btn-active bg-[#B4F461] px-7 font-bold">
             Blog
           </button>
 
@@ -40,7 +41,9 @@
           <!-- BDT corner -->
           <div class="flex items-center text-center gap-3">
             <img src="assets/coin.png" alt="" />
-            <p id="total-balance" class="font-semibold">5000 BDT</p>
+            <p class="font-semibold">
+              <span id="total-balance">5000</span> BDT
+            </p>
           </div>
         </div>
       </nav>
@@ -72,7 +75,7 @@
             <div><img src="assets/coin.png" alt="" /></div>
 
             <!-- card-1 0 BDT -->
-            <div><span id="noakhali-donate-amount">0</span> BDT </div>
+            <div><span id="noakhali-donate-amount">0</span> BDT</div>
           </div>
           <p class="font-bold text-xl">
             Donate for Flood at Noakhali, Bangladesh
@@ -93,10 +96,10 @@
               placeholder="Write Donation Amount"
               class="input input-bordered w-full mt-8"
             />
-            <!-- card-1 donation button -->
-            <button
+            <!-- card-1 donation button -->           
+              <button
               id="noakhali-donate-button"
-              class="btn btn-wide bg-white w-full mt-8 font-bold input-bordered"
+              class="btn  btn-wide bg-white w-full mt-8 font-bold input-bordered"
             >
               Donate Now
             </button>
@@ -104,6 +107,7 @@
         </div>
       </section>
       <!-- card-1 End -->
+
 
       <!-- card-2 Start -->
       <!-- card-2 -->
@@ -118,7 +122,7 @@
             <div><img src="assets/coin.png" alt="" /></div>
 
             <!-- card-2 0 BDT -->
-            <div><p>0 BDT</p></div>
+            <div><span id="feni-donate-amount">0</span>BDT</div>
           </div>
           <p class="font-bold text-xl">
             Donate for Flood at Noakhali, Bangladesh
@@ -134,12 +138,14 @@
           <div class="grid grid-cols-1">
             <!-- card-2 donation input -->
             <input
+              id="feni-donate-input"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered w-full mt-8"
             />
             <!-- card-2 donation button -->
             <button
+             id="feni-donate-button"
               class="btn btn-wide bg-white w-full mt-8 font-bold input-bordered"
             >
               Donate Now
@@ -162,7 +168,7 @@
             <div><img src="assets/coin.png" alt="" /></div>
 
             <!-- card-3 0 BDT -->
-            <div><p>0 BDT</p></div>
+            <div><span id="quota-donate-amount">0</span>BDT</div>
           </div>
           <p class="font-bold text-xl">
             Donate for Flood at Noakhali, Bangladesh
@@ -178,12 +184,14 @@
           <div class="grid grid-cols-1">
             <!-- card-3 donation input -->
             <input
+            id="quota-donate-input"
               type="text"
               placeholder="Write Donation Amount"
               class="input input-bordered w-full mt-8"
             />
             <!-- card-3 donation button -->
             <button
+            id="quota-donate-button"
               class="btn btn-wide bg-white w-full mt-8 font-bold input-bordered"
             >
               Donate Now
@@ -198,7 +206,7 @@
     <!-- All hidden section  -->
     <section>
       <!-- Donate success Card start -->
-      <div
+      <!-- <div
         id="donate-success"
         class="w-7/12 lg:w-3/12 mx-auto hidden bg-white border-2 p-5 rounded-lg text-center space-y-5 mb-10"
       >
@@ -208,78 +216,31 @@
         <p class="text-lg font-bold">Successfully</p>
 
         <!-- Close button -->
-        <button class="mt-4 bg-slate-200 px-4 py-2 rounded-lg font-bold">
+        <!-- <button class="mt-4 bg-slate-200 px-4 py-2 rounded-lg font-bold">
           Close confirmation
         </button>
+      </div> 
+
+      <!-- You can open the modal using ID.showModal() method -->
+      <div class="w-5/12 mx-auto ">
+        <!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
+      <dialog id="my_modal_4" class="modal hidden">
+        <div class="modal-box w-6/12">
+          <h3 class="text-lg font-bold">Hello!</h3>
+          <p class="py-4">Click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
       </div>
       <!-- Donate success Card End -->
     </section>
 
-    <!-- FAQ Section start -->
-    <section class="w-10/12 mx-auto my-10">
-      <div class="flex items-center gap-4 mb-8">
-        <div><p class="font-bold text-5xl">Important FAQ</p></div>
-        <div><img class="h-12 w-14" src="assets/question.png" alt="" /></div>
-      </div>
 
-      <!-- collapse start -->
-      <div class="border-2 rounded-lg">
-        <div
-          tabindex="0"
-          class="collapse collapse-arrow border-base-300 border py-7"
-        >
-          <div class="collapse-title text-xl font-medium">
-            What is the Document Object Model(DOM)?
-          </div>
-          <div class="collapse-content">
-            <p>tabindex="0" attribute is necessary to make the div focusable</p>
-          </div>
-        </div>
-
-        <!-- collapse 2 -->
-        <div
-          tabindex="0"
-          class="collapse collapse-arrow border-base-300 border py-7"
-        >
-          <div class="collapse-title text-xl font-medium">
-            How do you select an element form the DOM?
-          </div>
-          <div class="collapse-content">
-            <p>tabindex="0" attribute is necessary to make the div focusable</p>
-          </div>
-        </div>
-
-        <!-- collapse 3 -->
-        <div
-          tabindex="0"
-          class="collapse collapse-arrow border-base-300 border py-7"
-        >
-          <div class="collapse-title text-xl font-medium">
-            What is event delegation in the context of the DOM, and why is it
-            useful?
-          </div>
-          <div class="collapse-content">
-            <p>tabindex="0" attribute is necessary to make the div focusable</p>
-          </div>
-        </div>
-
-        <!-- collapse 4 -->
-        <div
-          tabindex="0"
-          class="collapse collapse-arrow border-base-300 border py-7"
-        >
-          <div class="collapse-title text-xl font-medium">
-            How do you manipulate and element's attributes and style using the
-            DOM?
-          </div>
-          <div class="collapse-content">
-            <p>tabindex="0" attribute is necessary to make the div focusable</p>
-          </div>
-        </div>
-      </div>
-      <!-- collapse start -->
-    </section>
-    <!-- FAQ Section End -->
 
     <!-- History Section start-->
     <section class="w-10/12 mx-auto mb-7">
@@ -290,5 +251,6 @@
     <!-- History Section End-->
 
     <script src="index.js"></script>
+    <script src="blog.html"></script>
   </body>
 </html>

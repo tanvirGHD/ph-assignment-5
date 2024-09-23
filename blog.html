@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- Google Lexend Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisyUI cdn link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- header section start -->
+    <header class="sticky top-0 z-10">
+      <!-- navigation start -->
+      <nav class="bg-[#fffaf0]">
+        <div
+          class="w-11/12 lg:w-10/12 mx-auto flex justify-between pt-7 pb-11 mb-14"
+        >
+          <!-- Blog button -->
+          <button          
+            id="blog-button"
+            class="btn btn-active bg-[#B4F461] px-7 font-bold"
+          >
+            home
+          </button>
+          
+
+          <!-- Donate banglasdesh -->
+          <div class="flex items-center text-center gap-3">
+            <img src="assets/logo.png" alt="" />
+            <p class="text-xl font-bold">Donate Bnagladesh</p>
+          </div>
+
+          <!-- BDT corner -->
+          <div class="flex items-center text-center gap-3">
+            <img src="assets/coin.png" alt="" />
+            <p class="font-semibold">
+              <span id="total-balance">5000</span> BDT
+            </p>
+          </div>
+        </div>
+      </nav>
+
+      <!-- navigation section End -->
+    </header>
+    <!-- header section End -->
+
+    <!-- FAQ  -->
+    <!-- FAQ Section start -->
+    <section class="w-10/12 mx-auto my-10">
+      <div class="flex items-center gap-4 mb-8">
+        <div><p class="font-bold text-5xl">Important FAQ</p></div>
+        <div><img class="h-12 w-14" src="assets/question.png" alt="" /></div>
+      </div>
+
+      <!-- collapse start -->
+      <div class="border-2 rounded-lg">
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 border py-7"
+        >
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model(DOM)?
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+
+        <!-- collapse 2 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 border py-7"
+        >
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element form the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+
+        <!-- collapse 3 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 border py-7"
+        >
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+
+        <!-- collapse 4 -->
+        <div
+          tabindex="0"
+          class="collapse collapse-arrow border-base-300 border py-7"
+        >
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate and element's attributes and style using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p>tabindex="0" attribute is necessary to make the div focusable</p>
+          </div>
+        </div>
+      </div>
+      <!-- collapse start -->
+    </section>
+    <!-- FAQ Section End -->
+    <script src="index.js"></script>
+  </body>
+</html>
