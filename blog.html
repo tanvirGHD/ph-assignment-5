@@ -27,18 +27,18 @@
         <div
           class="w-11/12 lg:w-10/12 mx-auto flex justify-between pt-7 pb-11 mb-14"
         >
-           <!-- Home button -->
-           <button 
-           id="home-button" 
-           class="btn btn-active bg-[#B4F461] lg:px-7 font-bold">
-             Home
-           </button>
-          
+          <!-- Home button -->
+          <button
+            id="home-button"
+            class="btn p-2 btn-active bg-[#B4F461] lg:px-7 font-bold"
+          >
+            Home
+          </button>
 
           <!-- Donate banglasdesh -->
           <div class="flex items-center text-center gap-2 lg:gap-3">
-            <img src="assets/logo.png" alt="" />
-            <p class=" text-lg lg:text-xl font-bold">Donate Bnagladesh</p>
+            <div class="w-7 lg:w-16"><img src="assets/logo.png" alt="" /></div>
+            <p class="text-sm lg:text-xl font-bold">Donate Bnagladesh</p>
           </div>
 
           <!-- BDT corner -->
@@ -54,17 +54,21 @@
       <!-- navigation section End -->
     </header>
     <!-- header section End -->
-    
+
     <!-- FAQ  -->
     <!-- FAQ Section start -->
     <section class="w-10/12 mx-auto my-10">
       <div class="flex items-center gap-4 mb-8">
-        <div><p class="font-bold text-2xl md:text-3xl lg:text-5xl">Important FAQ</p></div>
+        <div>
+          <p class="font-bold text-2xl md:text-3xl lg:text-5xl">
+            Important FAQ
+          </p>
+        </div>
         <div><img class="h-12 w-14" src="assets/question.png" alt="" /></div>
       </div>
 
       <!-- collapse start -->
-       <!-- collapse 1 -->
+      <!-- collapse 1 -->
       <div class="border-2 rounded-lg">
         <div
           tabindex="0"
@@ -74,9 +78,23 @@
             What is the Document Object Model(DOM)?
           </div>
           <div class="collapse-content">
-            <p>The Document Object Model (DOM) is a programming interface provided by browsers that allows developers to interact with and manipulate the structure of HTML and XML documents. The DOM represents the document as a tree structure where each node corresponds to a part of the document, such as elements, attributes, and text. This model provides a way for scripts (commonly JavaScript) to access and update the content, structure, and styles of web pages dynamically.
-
-            Through the DOM, developers can create, delete, and modify elements, enabling dynamic changes to web pages without the need for a full reload. For example, with the DOM, you can add event listeners to elements, change their styles, or modify their content in response to user interactions. This capability is essential for building interactive web applications, as it allows the user experience to be more engaging and responsive.</p>
+            <p>
+              The Document Object Model (DOM) is a programming interface
+              provided by browsers that allows developers to interact with and
+              manipulate the structure of HTML and XML documents. The DOM
+              represents the document as a tree structure where each node
+              corresponds to a part of the document, such as elements,
+              attributes, and text. This model provides a way for scripts
+              (commonly JavaScript) to access and update the content, structure,
+              and styles of web pages dynamically. Through the DOM, developers
+              can create, delete, and modify elements, enabling dynamic changes
+              to web pages without the need for a full reload. For example, with
+              the DOM, you can add event listeners to elements, change their
+              styles, or modify their content in response to user interactions.
+              This capability is essential for building interactive web
+              applications, as it allows the user experience to be more engaging
+              and responsive.
+            </p>
           </div>
         </div>
 
@@ -89,17 +107,28 @@
             How do you select an element form the DOM?
           </div>
           <div class="collapse-content">
-            <p>Selecting an element from the DOM is a fundamental operation in web development that allows you to interact with specific elements on a web page. JavaScript provides several methods for selecting elements, the most common being getElementById, getElementsByClassName, getElementsByTagName, and querySelector.
-
-            getElementById(id): This method returns the first element that matches the specified ID. For example, document.getElementById('header') retrieves the element with the ID "header".
-                
-            getElementsByClassName(className): This method returns a live HTMLCollection of elements with the specified class name. For example, document.getElementsByClassName('btn') returns all elements with the class "btn".
-                
-            getElementsByTagName(tagName): This method returns a live HTMLCollection of elements with the specified tag name, such as document.getElementsByTagName('div').
-                
-            querySelector(selector): This method returns the first element that matches a CSS selector. For example, document.querySelector('.container') retrieves the first element with the class "container".
-                
-            These methods enable developers to access and manipulate elements efficiently, facilitating the creation of dynamic web applications.</p>
+            <p>
+              Selecting an element from the DOM is a fundamental operation in
+              web development that allows you to interact with specific elements
+              on a web page. JavaScript provides several methods for selecting
+              elements, the most common being getElementById,
+              getElementsByClassName, getElementsByTagName, and querySelector.
+              getElementById(id): This method returns the first element that
+              matches the specified ID. For example,
+              document.getElementById('header') retrieves the element with the
+              ID "header". getElementsByClassName(className): This method
+              returns a live HTMLCollection of elements with the specified class
+              name. For example, document.getElementsByClassName('btn') returns
+              all elements with the class "btn". getElementsByTagName(tagName):
+              This method returns a live HTMLCollection of elements with the
+              specified tag name, such as document.getElementsByTagName('div').
+              querySelector(selector): This method returns the first element
+              that matches a CSS selector. For example,
+              document.querySelector('.container') retrieves the first element
+              with the class "container". These methods enable developers to
+              access and manipulate elements efficiently, facilitating the
+              creation of dynamic web applications.
+            </p>
           </div>
         </div>
 
@@ -113,11 +142,25 @@
             useful?
           </div>
           <div class="collapse-content">
-            <p>Event delegation is a technique used in JavaScript to handle events efficiently by leveraging the concept of event bubbling. Instead of attaching event listeners to multiple individual elements, you can attach a single event listener to a parent element. When an event occurs on a child element, it bubbles up to the parent, where the listener can handle it.
-
-            This approach is particularly useful in scenarios where elements are dynamically added or removed from the DOM. For example, if you have a list of items and you want to handle click events for each item, instead of attaching a click listener to each item, you can attach it to the parent list. This way, even if you add new items later, the click events will still be handled without needing to reattach listeners.
-                
-            Event delegation improves performance and reduces memory usage, especially in large documents with many interactive elements. It simplifies the code by reducing redundancy, making it easier to maintain and update event handling logic across dynamically changing content.</p>
+            <p>
+              Event delegation is a technique used in JavaScript to handle
+              events efficiently by leveraging the concept of event bubbling.
+              Instead of attaching event listeners to multiple individual
+              elements, you can attach a single event listener to a parent
+              element. When an event occurs on a child element, it bubbles up to
+              the parent, where the listener can handle it. This approach is
+              particularly useful in scenarios where elements are dynamically
+              added or removed from the DOM. For example, if you have a list of
+              items and you want to handle click events for each item, instead
+              of attaching a click listener to each item, you can attach it to
+              the parent list. This way, even if you add new items later, the
+              click events will still be handled without needing to reattach
+              listeners. Event delegation improves performance and reduces
+              memory usage, especially in large documents with many interactive
+              elements. It simplifies the code by reducing redundancy, making it
+              easier to maintain and update event handling logic across
+              dynamically changing content.
+            </p>
           </div>
         </div>
 
@@ -131,18 +174,38 @@
             DOM?
           </div>
           <div class="collapse-content">
-            <p>Manipulating an element's attributes and style through the DOM is a core functionality that allows developers to create dynamic and interactive web pages. To modify an element's attributes, JavaScript provides the setAttribute() and getAttribute() methods. For instance, if you want to change an image's source, you can do so by selecting the image element and using element.setAttribute('src', 'newImage.jpg').
-
-            For style manipulation, you can use the style property of the DOM element to change CSS styles directly. For example, to change the background color of a div, you would use element.style.backgroundColor = 'blue'. This approach allows you to apply any CSS property directly via JavaScript.
-                
-            Additionally, for more complex style manipulations, you can add or remove CSS classes using the classList property. Methods like add(), remove(), and toggle() enable you to manage classes easily. For example, element.classList.add('active') adds the 'active' class to the element, applying corresponding styles defined in your CSS. Together, these techniques allow developers to create highly interactive web applications that respond to user actions in real-time.</p>
+            <p>
+              Manipulating an element's attributes and style through the DOM is
+              a core functionality that allows developers to create dynamic and
+              interactive web pages. To modify an element's attributes,
+              JavaScript provides the setAttribute() and getAttribute() methods.
+              For instance, if you want to change an image's source, you can do
+              so by selecting the image element and using
+              element.setAttribute('src', 'newImage.jpg'). For style
+              manipulation, you can use the style property of the DOM element to
+              change CSS styles directly. For example, to change the background
+              color of a div, you would use element.style.backgroundColor =
+              'blue'. This approach allows you to apply any CSS property
+              directly via JavaScript. Additionally, for more complex style
+              manipulations, you can add or remove CSS classes using the
+              classList property. Methods like add(), remove(), and toggle()
+              enable you to manage classes easily. For example,
+              element.classList.add('active') adds the 'active' class to the
+              element, applying corresponding styles defined in your CSS.
+              Together, these techniques allow developers to create highly
+              interactive web applications that respond to user actions in
+              real-time.
+            </p>
           </div>
         </div>
       </div>
       <!-- collapse start -->
     </section>
     <!-- FAQ Section End -->
+
+    <!-- footer start -->
+    <footer class="h-32 bg-[#fffaf0] mt-20"></footer>
+    <!-- footer End -->
     <script src="index.js"></script>
-    
   </body>
 </html>
