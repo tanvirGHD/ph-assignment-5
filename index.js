@@ -37,6 +37,7 @@
         historyButton.classList.remove('bg-[#B4F461]');
         document.getElementById('history-section').classList.add('hidden');
         document.getElementById('main-hidden').classList.remove('hidden');
+        document.getElementById('footer-history').classList.remove('hidden');
     })
 
     //history button
@@ -51,7 +52,7 @@
 
         document.getElementById('history-section').classList.remove('hidden');
         document.getElementById('main-hidden').classList.add('hidden');
-
+        document.getElementById('footer-history').classList.add('hidden');
 
     })
 
@@ -124,7 +125,7 @@
 
     if(isNaN(quotaInputValue) || quotaInputValue <= 0 || quotaInputValue === ''){
         alert('Invalid Donation Amount');
-        return
+        return;
     }
 
     else{
@@ -143,7 +144,7 @@
     const newTotalMyBalance = totalMyBalanceLess - parseFloat(quotaInputValue);
     document.getElementById('total-balance').innerText = newTotalMyBalance;
 
-    return
+    return;
 
     })
 
@@ -153,7 +154,7 @@ function addDonation(id, location, message) {
     const donationAmount = getInputValueById(id);
     const donationList = document.getElementById("history-section");
 
-    if (donationAmount) {
+    if (donationAmount > 0) {
         const currentTime = new Date().toLocaleString('en-GB', { timeZoneName: 'short' });
         
         const newDonation = document.createElement("div");
@@ -171,6 +172,8 @@ function addDonation(id, location, message) {
 }
 
 
+  
+  
 
 
 
