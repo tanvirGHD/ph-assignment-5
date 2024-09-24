@@ -143,23 +143,12 @@
           </div>
           <div class="collapse-content">
             <p>
-              Event delegation is a technique used in JavaScript to handle
-              events efficiently by leveraging the concept of event bubbling.
-              Instead of attaching event listeners to multiple individual
-              elements, you can attach a single event listener to a parent
-              element. When an event occurs on a child element, it bubbles up to
-              the parent, where the listener can handle it. This approach is
-              particularly useful in scenarios where elements are dynamically
-              added or removed from the DOM. For example, if you have a list of
-              items and you want to handle click events for each item, instead
-              of attaching a click listener to each item, you can attach it to
-              the parent list. This way, even if you add new items later, the
-              click events will still be handled without needing to reattach
-              listeners. Event delegation improves performance and reduces
-              memory usage, especially in large documents with many interactive
-              elements. It simplifies the code by reducing redundancy, making it
-              easier to maintain and update event handling logic across
-              dynamically changing content.
+              Event delegation is a JavaScript technique where event bubbling is used to handle events efficiently. Typically, an event listener is attached to the parent element, rather than attaching a separate event listener to each element. When an event occurs on a child element, the event is raised to the parent and the event listener on the parent handles it.
+
+              This is especially useful when adding or removing elements dynamically from the DOM. For example, to handle the click event on a list item, instead of adding a separate listener to each item, add an event listener to the parent of the entire list. Even if new items are added later, the event will fire automatically.
+
+              Event delegation increases performance and uses less memory, especially when there are many interactive elements. This simplifies event handling of dynamic content, simplifying code and reducing redundancy.
+    
             </p>
           </div>
         </div>

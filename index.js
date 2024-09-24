@@ -1,3 +1,4 @@
+    //global Function
     function getInputValueById(id){
         return parseFloat(document.getElementById(id).value);
     }
@@ -5,7 +6,6 @@
     function getPreviousMyBalance(id){
         return parseFloat(document.getElementById(id).innerText) || 0;
     }
-
 
     // Home button 
     const homeButton = document.getElementById('home-button');
@@ -19,15 +19,14 @@
     const blogButton = document.getElementById('blog-button');
     if (blogButton) {
         blogButton.addEventListener('click', function() {
-            window.location.href = 'blog.html'; // Redirect to Blog
+            window.location.href = 'blog.html';
         });
     }
-
 
     //Donation and history Button
     const donationButton =document.getElementById('donation-btn');
     const historyButton = document.getElementById('history-btn');
-    //donation
+    //donation button
     donationButton.addEventListener('click',function(){
         donationButton.classList.add(
             'bg-[#B4F461]'
@@ -40,7 +39,7 @@
         document.getElementById('main-hidden').classList.remove('hidden');
     })
 
-    //history
+    //history button
     historyButton.addEventListener('click',function(){
         historyButton.classList.add(
             'bg-[#B4F461]'
@@ -79,22 +78,12 @@
         
     const newAmountAddNoakhali = noakhaliCurrentDonateAmount + parseFloat(noakhaliInputValue);
     noakhaliDonateAmountValue.innerText = newAmountAddNoakhali;
-            
-    //my balance less
-    // const totalMyBalanceLess = document.getElementById('total-balance');
-    // const newTotalMyBalance = parseFloat(totalMyBalanceLess.innerText) -  noakhaliInputValue ;
-    // totalMyBalanceLess.innerText = newTotalMyBalance;
         
-    const totalMyBalanceLess = getPreviousMyBalance('total-balance')
+    const totalMyBalanceLess = getPreviousMyBalance('total-balance');
     const newTotalMyBalance = totalMyBalanceLess - parseFloat(noakhaliInputValue);
     document.getElementById('total-balance').innerText = newTotalMyBalance;
 
-    
-
     })
-
-
-
 
     // 2
 
@@ -120,16 +109,11 @@
     const newAmountAddFeni = feniCurrentDonateAmount + parseFloat(feniInputValue);
     feniDonateAmountValue.innerText = newAmountAddFeni;
 
-
-    //
+    
     const totalMyBalanceLess = getPreviousMyBalance('total-balance')
     const newTotalMyBalance = totalMyBalanceLess - parseFloat(feniInputValue);
     document.getElementById('total-balance').innerText = newTotalMyBalance;
-
-
-
     })
-
 
     // 3
     //Quota Movement donate
@@ -145,13 +129,9 @@
 
     else{
         const modal = document.getElementById('my_modal_2')
-        modal.showModal();
-        
+        modal.showModal(); 
 
     }
-
-    //
-
     const quotaDonateAmountValue = document.getElementById('quota-donate-amount');
     const feniCurrentDonateAmount = parseFloat(quotaDonateAmountValue.innerText);
 
@@ -166,96 +146,6 @@
     return
 
     })
-
-
-//History Details
-
-//     function addDonationNoakhali(id) {
-//         const donationAmount = getInputValueById(id);
-        
-//         // const donationAmount = document.getElementById("noakhali-donate-input").value;
-//         const donationList = document.getElementById("history-section");
-//         if (donationAmount ) {
-//             // Get current time
-//             const currentTime = new Date().toLocaleString('en-GB', { timeZoneName: 'short' });
-//             document.getElementById('history-section')
-//             // Create a new div for the donation
-//             const newDonation = document.createElement("div");
-//             newDonation.className = "p-4 mt-2 border-2 rounded shadow-md";
-
-//             // Add content (donation amount and time)
-//             newDonation.innerHTML = `
-//                 <p><strong>${donationAmount} Taka Donated for fsmine-2024 at,Noakhali,Banglasdesh</strong> </p>
-//                 <p>Date: ${currentTime} (Bangladesh Standard Time)</p>
-//             `;
-
-//             // Append new div to donation list
-//             donationList.appendChild(newDonation);
-// don
-//             // Clear the input field
-//             document.getElementById("donationInput").value = "";
-//         }
-    
-//     }
-
-//     //feni history
-//     function addDonationFeni(id) {
-//         const donationAmount = getInputValueById(id);
-        
-//         // const donationAmount = document.getElementById("noakhali-donate-input").value;
-//         const donationList = document.getElementById("history-section");
-//         if (donationAmount ) {
-//             // Get current time
-//             const currentTime = new Date().toLocaleString('en-GB', { timeZoneName: 'short' });
-//             document.getElementById('history-section')
-//             // Create a new div for the donation
-//             const newDonation = document.createElement("div");
-//             newDonation.className = "p-4 mt-2 border-2 rounded shadow-md";
-
-//             // Add content (donation amount and time)
-//             newDonation.innerHTML = `
-//                 <p><strong>${donationAmount} Taka Donated for Flood Relief in feni,Banglasdesh</strong> </p>
-//                 <p>Date: ${currentTime} (Bangladesh Standard Time)</p>
-//             `;
-
-//             // Append new div to donation list
-//             donationList.appendChild(newDonation);
-// don
-//             // Clear the input field
-//             document.getElementById("donationInput").value = "";
-//         }
-    
-//     }
-
-//     //quota history
-//     function addDonationQuota(id) {
-//         const donationAmount = getInputValueById(id);
-        
-//         // const donationAmount = document.getElementById("noakhali-donate-input").value;
-//         const donationList = document.getElementById("history-section");
-//         if (donationAmount ) {
-//             // Get current time
-//             const currentTime = new Date().toLocaleString('en-GB', { timeZoneName: 'short' });
-//             document.getElementById('history-section')
-//             // Create a new div for the donation
-//             const newDonation = document.createElement("div");
-//             newDonation.className = "p-4 mt-2 border-2 rounded shadow-md";
-
-//             // Add content (donation amount and time)
-//             newDonation.innerHTML = `
-//                 <p><strong>${donationAmount} Taka is Donate For Aid For injured in the Quota Movement Banglasdesh</strong> </p>
-//                 <p>Date: ${currentTime} (Bangladesh Standard Time)</p>
-//             `;
-
-//             // Append new div to donation list
-//             donationList.appendChild(newDonation);
-// don
-//             // Clear the input field
-//             document.getElementById("donationInput").value = "";
-//         }
-    
-//     }
-
 
 
 //donation History
